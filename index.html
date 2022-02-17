@@ -1,189 +1,18 @@
 <!DOCTYPE html>
 <html lang="en" >
 <head>
+  <audio src="Audio 1.mp3" id="myAudio"></audio>
   <script>
-    function myFunction1()
-    {
-      var checkBox = document.getElementById("switch-1");
-      if (checkBox.checked == true)
-      {
-        var request = new XMLHttpRequest();
-
-request.open('GET', 'https://blr1.blynk.cloud/external/api/update?token=7rzvV6nkV6SVnHafeVI3SV0x6IaPrXJS&v2=0');
-
-request.onreadystatechange = function () {
-  if (this.readyState === 4) {
-    console.log('Status:', this.status);
-    console.log('Headers:', this.getAllResponseHeaders());
-    console.log('Body:', this.responseText);
-  }
-};
-
-request.send();
-      }
-      else
-       {
-        var request = new XMLHttpRequest();
-
-request.open('GET', 'https://blr1.blynk.cloud/external/api/update?token=7rzvV6nkV6SVnHafeVI3SV0x6IaPrXJS&v2=1');
-
-request.onreadystatechange = function () {
-  if (this.readyState === 4) {
-    console.log('Status:', this.status);
-    console.log('Headers:', this.getAllResponseHeaders());
-    console.log('Body:', this.responseText);
-  }
-};
-
-request.send();
-      }
-
-
-    }
-    function myFunction2()
-    {
-      var checkBox = document.getElementById("switch-2");
-      if (checkBox.checked == true)
-      {
-        var request = new XMLHttpRequest();
-
-request.open('GET', 'https://blr1.blynk.cloud/external/api/update?token=7rzvV6nkV6SVnHafeVI3SV0x6IaPrXJS&v1=0');
-
-request.onreadystatechange = function () {
-  if (this.readyState === 4) {
-    console.log('Status:', this.status);
-    console.log('Headers:', this.getAllResponseHeaders());
-    console.log('Body:', this.responseText);
-  }
-};
-
-request.send();
-      }
-      else
-       {
-        var request = new XMLHttpRequest();
-
-request.open('GET', 'https://blr1.blynk.cloud/external/api/update?token=7rzvV6nkV6SVnHafeVI3SV0x6IaPrXJS&v1=1');
-
-request.onreadystatechange = function () {
-  if (this.readyState === 4) {
-    console.log('Status:', this.status);
-    console.log('Headers:', this.getAllResponseHeaders());
-    console.log('Body:', this.responseText);
-  }
-};
-
-request.send();
-      }
-
-    }
-    function myFunction3()
-    {
-
-      var request = new XMLHttpRequest();
-
-request.open('GET', 'https://blr1.blynk.cloud/external/api/update?token=7rzvV6nkV6SVnHafeVI3SV0x6IaPrXJS&v1=1');
-
-request.onreadystatechange = function () {
-  if (this.readyState === 4) {
-    console.log('Status:', this.status);
-    console.log('Headers:', this.getAllResponseHeaders());
-    console.log('Body:', this.responseText);
-  }
-};
-
-request.send();
-
-
-var request = new XMLHttpRequest();
-
-request.open('GET', 'https://blr1.blynk.cloud/external/api/update?token=7rzvV6nkV6SVnHafeVI3SV0x6IaPrXJS&v2=1');
-
-request.onreadystatechange = function () {
-  if (this.readyState === 4) {
-    console.log('Status:', this.status);
-    console.log('Headers:', this.getAllResponseHeaders());
-    console.log('Body:', this.responseText);
-  }
-};
-
-request.send();
    
-document.getElementById("switch-1").checked = false;
-document.getElementById("switch-2").checked = false;
+
+function playMyAudiopp(){
+
+document.getElementById("myAudio").play();
+
+function pauseMyAudiopp(){
+       document.getElementById("myAudio").pause();
 }
-function myFunction4()
-    {
-
-      var request = new XMLHttpRequest();
-
-request.open('GET', 'https://blr1.blynk.cloud/external/api/update?token=7rzvV6nkV6SVnHafeVI3SV0x6IaPrXJS&v1=0');
-
-request.onreadystatechange = function () {
-  if (this.readyState === 4) {
-    console.log('Status:', this.status);
-    console.log('Headers:', this.getAllResponseHeaders());
-    console.log('Body:', this.responseText);
-  }
-};
-
-request.send();
-
-
-var request = new XMLHttpRequest();
-
-request.open('GET', 'https://blr1.blynk.cloud/external/api/update?token=7rzvV6nkV6SVnHafeVI3SV0x6IaPrXJS&v2=0');
-
-request.onreadystatechange = function () {
-  if (this.readyState === 4) {
-    console.log('Status:', this.status);
-    console.log('Headers:', this.getAllResponseHeaders());
-    console.log('Body:', this.responseText);
-  }
-};
-
-request.send();
-document.getElementById("switch-2").checked = true;
-document.getElementById("switch-1").checked = true;
-}
-
-window.onSpotifyWebPlaybackSDKReady = () => {
-            const token = 'BQBiXO-zKjq3gAFcahCUsdfB4lZhMaGUfApiTuj8mWKoNPApgaQTNqjVVPwEENXkfYlrRWvSjSdCjoM7BVPDG6pL0wBGu1sh56nFQ41H3TXvjihxfM62Eo2iwt69ZHd49OqeAReNAgWTWuXM2sZ6OAAgN0EtvFqpPgdk5-AxoKYCcN7dNZT5BQqi8pk';
-            const player = new Spotify.Player({
-                name: 'Web Playback SDK Quick Start Player',
-                getOAuthToken: cb => { cb(token); },
-                volume: 0.5
-            });
-
-            // Ready
-            player.addListener('ready', ({ device_id }) => {
-                console.log('Ready with Device ID', device_id);
-            });
-
-            // Not Ready
-            player.addListener('not_ready', ({ device_id }) => {
-                console.log('Device ID has gone offline', device_id);
-            });
-
-            player.addListener('initialization_error', ({ message }) => {
-                console.error(message);
-            });
-
-            player.addListener('authentication_error', ({ message }) => {
-                console.error(message);
-            });
-
-            player.addListener('account_error', ({ message }) => {
-                console.error(message);
-            });
-
-            document.getElementById('togglePlay').onclick = function() {
-              player.togglePlay();
-            };
-
-            player.connect();
-        }
-  </script>
+ </script>
   <meta charset="UTF-8">
   <title>Dashboard</title>
   <link href="https://fonts.googleapis.com/css?family=Poppins:400,600,700&display=swap" rel="stylesheet">
@@ -246,8 +75,9 @@ window.onSpotifyWebPlaybackSDKReady = () => {
 
       <span class="circle__btn">
      
-        <ion-icon class="pause" name="pause"></ion-icon>
-        <ion-icon class="play" id="togglePlay" name="play"></ion-icon>
+        <ion-icon  class="pause" id="myAudio" name="pause" onClick="playMyAudiopp()"></ion-icon>
+
+        <ion-icon class="play" id="myAudio" name="play" onClick="pauseMyAudiopp()"></ion-icon>
       </span>
       <span class="circle__back-1"></span>
       <span class="circle__back-2"></span>

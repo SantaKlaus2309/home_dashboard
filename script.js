@@ -95,3 +95,148 @@ playBtn.addEventListener('click', function(e) {
   wave1.classList.toggle('paused');
   wave2.classList.toggle('paused');
 });
+
+function myFunction1()
+{
+  var checkBox = document.getElementById("switch-1");
+  if (checkBox.checked == true)
+  {
+    var request = new XMLHttpRequest();
+
+request.open('GET', 'https://blr1.blynk.cloud/external/api/update?token=7rzvV6nkV6SVnHafeVI3SV0x6IaPrXJS&v2=0');
+
+request.onreadystatechange = function () {
+if (this.readyState === 4) {
+console.log('Status:', this.status);
+console.log('Headers:', this.getAllResponseHeaders());
+console.log('Body:', this.responseText);
+}
+};
+
+request.send();
+  }
+  else
+   {
+    var request = new XMLHttpRequest();
+
+request.open('GET', 'https://blr1.blynk.cloud/external/api/update?token=7rzvV6nkV6SVnHafeVI3SV0x6IaPrXJS&v2=1');
+
+request.onreadystatechange = function () {
+if (this.readyState === 4) {
+console.log('Status:', this.status);
+console.log('Headers:', this.getAllResponseHeaders());
+console.log('Body:', this.responseText);
+}
+};
+
+request.send();
+  }
+
+
+}
+function myFunction2()
+{
+  var checkBox = document.getElementById("switch-2");
+  if (checkBox.checked == true)
+  {
+    var request = new XMLHttpRequest();
+
+request.open('GET', 'https://blr1.blynk.cloud/external/api/update?token=7rzvV6nkV6SVnHafeVI3SV0x6IaPrXJS&v1=0');
+
+request.onreadystatechange = function () {
+if (this.readyState === 4) {
+console.log('Status:', this.status);
+console.log('Headers:', this.getAllResponseHeaders());
+console.log('Body:', this.responseText);
+}
+};
+
+request.send();
+  }
+  else
+   {
+    var request = new XMLHttpRequest();
+
+request.open('GET', 'https://blr1.blynk.cloud/external/api/update?token=7rzvV6nkV6SVnHafeVI3SV0x6IaPrXJS&v1=1');
+
+request.onreadystatechange = function () {
+if (this.readyState === 4) {
+console.log('Status:', this.status);
+console.log('Headers:', this.getAllResponseHeaders());
+console.log('Body:', this.responseText);
+}
+};
+
+request.send();
+  }
+
+}
+function myFunction3()
+{
+
+  var request = new XMLHttpRequest();
+
+request.open('GET', 'https://blr1.blynk.cloud/external/api/update?token=7rzvV6nkV6SVnHafeVI3SV0x6IaPrXJS&v1=1');
+
+request.onreadystatechange = function () {
+if (this.readyState === 4) {
+console.log('Status:', this.status);
+console.log('Headers:', this.getAllResponseHeaders());
+console.log('Body:', this.responseText);
+}
+};
+
+request.send();
+
+
+var request = new XMLHttpRequest();
+
+request.open('GET', 'https://blr1.blynk.cloud/external/api/update?token=7rzvV6nkV6SVnHafeVI3SV0x6IaPrXJS&v2=1');
+
+request.onreadystatechange = function () {
+if (this.readyState === 4) {
+console.log('Status:', this.status);
+console.log('Headers:', this.getAllResponseHeaders());
+console.log('Body:', this.responseText);
+}
+};
+
+request.send();
+
+document.getElementById("switch-1").checked = false;
+document.getElementById("switch-2").checked = false;
+}
+function myFunction4()
+{
+
+  var request = new XMLHttpRequest();
+
+request.open('GET', 'https://blr1.blynk.cloud/external/api/update?token=7rzvV6nkV6SVnHafeVI3SV0x6IaPrXJS&v1=0');
+
+request.onreadystatechange = function () {
+if (this.readyState === 4) {
+console.log('Status:', this.status);
+console.log('Headers:', this.getAllResponseHeaders());
+console.log('Body:', this.responseText);
+}
+};
+
+request.send();
+
+
+var request = new XMLHttpRequest();
+
+request.open('GET', 'https://blr1.blynk.cloud/external/api/update?token=7rzvV6nkV6SVnHafeVI3SV0x6IaPrXJS&v2=0');
+
+request.onreadystatechange = function () {
+if (this.readyState === 4) {
+console.log('Status:', this.status);
+console.log('Headers:', this.getAllResponseHeaders());
+console.log('Body:', this.responseText);
+}
+};
+
+request.send();
+document.getElementById("switch-2").checked = true;
+document.getElementById("switch-1").checked = true;
+}
