@@ -147,7 +147,42 @@ document.getElementById("switch-2").checked = true;
 document.getElementById("switch-1").checked = true;
 }
 
+window.onSpotifyWebPlaybackSDKReady = () => {
+            const token = 'BQBiXO-zKjq3gAFcahCUsdfB4lZhMaGUfApiTuj8mWKoNPApgaQTNqjVVPwEENXkfYlrRWvSjSdCjoM7BVPDG6pL0wBGu1sh56nFQ41H3TXvjihxfM62Eo2iwt69ZHd49OqeAReNAgWTWuXM2sZ6OAAgN0EtvFqpPgdk5-AxoKYCcN7dNZT5BQqi8pk';
+            const player = new Spotify.Player({
+                name: 'Web Playback SDK Quick Start Player',
+                getOAuthToken: cb => { cb(token); },
+                volume: 0.5
+            });
 
+            // Ready
+            player.addListener('ready', ({ device_id }) => {
+                console.log('Ready with Device ID', device_id);
+            });
+
+            // Not Ready
+            player.addListener('not_ready', ({ device_id }) => {
+                console.log('Device ID has gone offline', device_id);
+            });
+
+            player.addListener('initialization_error', ({ message }) => {
+                console.error(message);
+            });
+
+            player.addListener('authentication_error', ({ message }) => {
+                console.error(message);
+            });
+
+            player.addListener('account_error', ({ message }) => {
+                console.error(message);
+            });
+
+            document.getElementById('togglePlay').onclick = function() {
+              player.togglePlay();
+            };
+
+            player.connect();
+        }
   </script>
   <meta charset="UTF-8">
   <title>Dashboard</title>
@@ -156,6 +191,7 @@ document.getElementById("switch-1").checked = true;
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
 <script src="https://kit.fontawesome.com/f0601b0fb2.js" crossorigin="anonymous"></script>
+<script src="https://sdk.scdn.co/spotify-player.js"></script>
 <script type='module' src='https://unpkg.com/ionicons@5.0.0/dist/ionicons/ionicons.esm.js'></script>
 <script nomodule='' src='https://unpkg.com/ionicons@5.0.0/dist/ionicons/ionicons.js'></script>
 
@@ -207,9 +243,11 @@ document.getElementById("switch-1").checked = true;
     </div>
     
     <div class="circle">
+
       <span class="circle__btn">
-        <ion-icon class="pause" name="pause"></ion-icon>
-        <ion-icon class="play" name="play"></ion-icon>
+     
+        <ion-icon class="pause"id="togglePlay" name="pause"></ion-icon>
+        <ion-icon class="play" id="togglePlay" name="play"></ion-icon>
       </span>
       <span class="circle__back-1"></span>
       <span class="circle__back-2"></span>
