@@ -245,9 +245,8 @@ window.onSpotifyWebPlaybackSDKReady = () => {
     <div class="circle">
 
       <span class="circle__btn">
-     <button id="togglePlay">
-        <ion-icon class="pause" name="pause"></ion-icon></button>
-        <ion-icon class="play" id="togglePlay" name="play"></ion-icon>
+     <ion-icon class="pause" name="pause" onclick="myFunction5()"></ion-icon></button>
+        <ion-icon class="play" id="togglePlay" onclick="myFunction5()" name="play"></ion-icon>
       </span>
       <span class="circle__back-1"></span>
       <span class="circle__back-2"></span>
@@ -266,15 +265,15 @@ window.onSpotifyWebPlaybackSDKReady = () => {
       
       <input type="radio" name="radio2" value="3" id="tab-1" checked/>
       <label for="tab-1" class= "segmented-control__1">
-        <p>Tab 1</p></label>
+        <p>Hall A</p></label>
       
       <input type="radio" name="radio2" value="4" id="tab-2" />
       <label for="tab-2" class= "segmented-control__2">
-        <p>Tab 2</p></label>
+        <p>Hall B</p></label>
       
       <input type="radio" name="radio2" value="5" id="tab-3" />
       <label for="tab-3" class= "segmented-control__3">
-        <p>Tab 3</p></label>
+        <p>Hall C</p></label>
       
       <div class="segmented-control__color"></div>
     </div>
