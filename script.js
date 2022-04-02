@@ -226,8 +226,8 @@ console.log('Body:', this.responseText);
 
 request.send();
 
-document.getElementById("switch-2").checked = true;
-document.getElementById("switch-1").checked = true;
+document.getElementById("switch-2").checked = false;
+document.getElementById("switch-1").checked = false;
 }
 
 function motorplay(){
