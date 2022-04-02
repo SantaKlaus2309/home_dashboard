@@ -240,3 +240,40 @@ request.send();
 document.getElementById("switch-2").checked = true;
 document.getElementById("switch-1").checked = true;
 }
+
+function playMyAudiopp(){
+
+  var request = new XMLHttpRequest();
+
+  request.open('GET', 'https://blr1.blynk.cloud/external/api/update?token=7rzvV6nkV6SVnHafeVI3SV0x6IaPrXJS&v5=0');
+  
+  request.onreadystatechange = function () {
+  if (this.readyState === 4) {
+  console.log('Status:', this.status);
+  console.log('Headers:', this.getAllResponseHeaders());
+  console.log('Body:', this.responseText);
+  }
+  };
+  
+  request.send();
+
+}
+
+
+function pauseMyAudiopp(){
+  var request = new XMLHttpRequest();
+
+request.open('GET', 'https://blr1.blynk.cloud/external/api/update?token=7rzvV6nkV6SVnHafeVI3SV0x6IaPrXJS&v5=1');
+
+request.onreadystatechange = function () {
+if (this.readyState === 4) {
+console.log('Status:', this.status);
+console.log('Headers:', this.getAllResponseHeaders());
+console.log('Body:', this.responseText);
+}
+};
+
+request.send();
+       
+
+}
