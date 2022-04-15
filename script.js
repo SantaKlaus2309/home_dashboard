@@ -175,7 +175,7 @@ function myFunction3()
 {
   var request = new XMLHttpRequest();
 
-  request.open('GET', 'https://blr1.blynk.cloud/external/api/update?token=7rzvV6nkV6SVnHafeVI3SV0x6IaPrXJS&v3=0');
+  request.open('GET', 'https://blr1.blynk.cloud/external/api/update?token=7rzvV6nkV6SVnHafeVI3SV0x6IaPrXJS&v8=0');
   
   request.onreadystatechange = function () {
   if (this.readyState === 4) {
@@ -227,7 +227,7 @@ console.log('Body:', this.responseText);
 request.send();
  var request = new XMLHttpRequest();
 
-request.open('GET', 'https://blr1.blynk.cloud/external/api/update?token=7rzvV6nkV6SVnHafeVI3SV0x6IaPrXJS&v3=1');
+request.open('GET', 'https://blr1.blynk.cloud/external/api/update?token=7rzvV6nkV6SVnHafeVI3SV0x6IaPrXJS&v8=1');
 
 request.onreadystatechange = function () {
 if (this.readyState === 4) {
@@ -246,7 +246,7 @@ function motorplay(){
 
    var request = new XMLHttpRequest();
 
-request.open('GET', 'https://blr1.blynk.cloud/external/api/update?token=7rzvV6nkV6SVnHafeVI3SV0x6IaPrXJS&v3=0');
+request.open('GET', 'https://blr1.blynk.cloud/external/api/update?token=7rzvV6nkV6SVnHafeVI3SV0x6IaPrXJS&v8=0');
 
 request.onreadystatechange = function () {
 if (this.readyState === 4) {
@@ -265,7 +265,7 @@ function motorstop(){
 
   var request = new XMLHttpRequest();
 
-request.open('GET', 'https://blr1.blynk.cloud/external/api/update?token=7rzvV6nkV6SVnHafeVI3SV0x6IaPrXJS&v3=1');
+request.open('GET', 'https://blr1.blynk.cloud/external/api/update?token=7rzvV6nkV6SVnHafeVI3SV0x6IaPrXJS&v8=1');
 
 request.onreadystatechange = function () {
 if (this.readyState === 4) {
